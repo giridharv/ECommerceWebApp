@@ -1,0 +1,84 @@
+
+body{
+font-family: monospace;
+}
+.navbar
+{
+    box-shadow: 5px 2px 5px 2px grey;
+}
+.card
+{
+    margin-left: 200px;
+    width: 500px;
+    box-shadow: 2px 2px 2px 1px grey;
+}
+#company-logo
+{
+    font-size: x-large;
+}
+#shipFormState
+{
+    width: 200px;
+}
+#shipFormName
+{
+    width: 200px;
+}
+#shipFormStreetAddress
+{
+    width: 200px;
+}
+#shipFormApartmentNumber
+{
+    width: 200px;
+}
+#shipFormCity
+{
+    width: 200px;
+}
+#shipFormZipcode
+{
+    width: 200px;
+}
+#shipFormPhoneNumber
+{
+    width: 200px;
+}
+#proceedToBilling
+{
+    float:right;
+}
+#cardDetailsBtn
+{
+    float:right;
+}
+#billingCardHolderName
+{
+    width: 200px;
+}
+#billingCardNumber
+{
+    width: 200px;
+}
+#billingCardMonth
+{
+    width: 200px;
+}
+#billingCardYear
+{
+    width: 200px;
+}
+#billingCardCVV
+{
+    width: 200px;
+}
+#orderSummary
+{
+    display: inline-block;
+    float: right;
+}
+#submitOrder
+{
+    margin-left: 10em;
+
+}

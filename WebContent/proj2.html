@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="library/jquery.js"></script>
+    <script src="library/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div class="navbar-container">
+    <nav class ="navbar navbar-light justify-content-between">
+        <a href ="#" class ="navbar-brand">@SoundComponent</a>
+        <form class="form-inline">
+            <input type="text" placeholder="Search" class="form-control" id="searchBar" />
+            <input type="image" src="html/shopping-cart_2_30x30.png" id="cart"/>
+            <span id="cartQuantity"></span>
+        </form>
+    </nav>
+</div>
+<div class="container" id="labelContainer">
+    <br />
+    <label id="brandLabels">Brand</label>
+    <br /><br/>
+    <input type="radio" name="brand" id="brand1">
+    <label for="brand1" id="brandName_1">Bose</label>
+    <br />
+    <input type="radio" name="brand" id="brand2">
+    <label for="brand2" id="brandName_2">Klipsch</label>
+    <br />
+    <input type="radio" name="brand" id="brand3">
+    <label  for="brand3" id="brandName_3">Polk Audio</label>
+    <br />
+    <input type="radio" name="brand" id="brand4">
+    <label for="brand4" id="brandName_4">Sony</label>
+    <br /><br /><br />
+
+    <label id="categoryLabels">Category</label>
+    <br /><br/>
+    <input type="radio" name="category" id="category1">
+    <label for="category1" id="categoryName_1">Bookshelf Speakers</label>
+    <br />
+    <input type="radio" name="category" id="category2">
+    <label for="category2" id="categoryName_2">Floor Speakers</label>
+    <br />
+    <input type="radio" name="category" id="category3">
+    <label  for="category3" id="categoryName_3">In Ceiling Speakers</label>
+    <br /><br/><br />
+
+    <label id="availabilityLabels">Availability</label>
+    <br /><br/>
+    <input type="radio" name="availability" id="availabilityLabel1">
+    <label for="availabilityLabel1" id="availabilityName_1">In Stock</label>
+    <br />
+    <input type="radio" name="availability" id="availabilityLabel2">
+    <label for="availabilityLabel2" id="availabilityName_2">Coming Soon</label>
+</div>
+<br />
+<div class="container" id="productsDiv">
+</div>
+</body>
+</html>

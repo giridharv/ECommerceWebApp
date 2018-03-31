@@ -1,0 +1,161 @@
+body{
+    font-family: monospace;
+}
+.navbar
+{
+    box-shadow: 5px 2px 5px 2px grey;
+}
+.navbar-container
+{
+	position:fixed;
+	z-index:100;
+	width:100%;
+	background:#fff;
+}
+.card
+{
+	margin-top:80px;
+    margin-left: 60px;
+    border: none;
+    height : 400px;
+    width:300px;
+    display:inline-block;
+    cursor:pointer;
+}
+img
+{
+    padding-top:5px;
+    margin-left: 45px;
+    width:200px;
+    height:195px;
+}
+
+#labelForAvailability
+{
+    margin-left: 10px;
+}
+#labelForManfId
+{
+    margin-left: 10px;
+}
+.form-inline
+{
+    /*text-align: center;*/
+    margin-left: 5em;
+}
+#searchBar
+{
+    text-align: center;
+    margin-right: 600px;
+    width: 500px;
+    background: url("../html/search_3_50x50_1_30x30.png") left no-repeat;
+    outline:0;
+}
+#labelContainer
+{
+	position:fixed;
+	margin-top:60px;
+	padding-left:30px;
+    border: solid thin grey ;
+    width: 330px;
+    float: left;
+    display:block;
+    height:100vh;
+}
+#brandLabels
+{
+    font-weight: bold;
+}
+#categoryLabels
+{
+    font-weight: bold;
+}
+#brandName_1,#brandName_2,#brandName_3,#brandName_4,#categoryName_1,#categoryName_2,#categoryName_3,#availabilityName_1,#availabilityName_2
+{
+    font-size: 15px;
+}
+
+#availabilityLabels
+{
+    font-weight: bold;
+}
+#cartQuantity
+{
+    margin-top: -25px;
+    margin-left: -5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ef9314;
+    color: white;
+    text-align: center;
+
+}
+#cart{
+    outline:0;
+    margin-left: 10px;
+}
+#productsDiv
+{
+	position:relative;
+}
+.increaseCartQty
+{
+	display: inline-block;
+    vertical-align: middle;
+    float: right;
+    outline: 0;
+    height:30px;
+    margin-top:2px;
+    margin-bottom:2px;
+    margin-right:2px;
+}
+.deleteFromCart
+{
+	height:30px;
+	display: inline-block;
+    vertical-align: middle;
+    float: left;
+    outline: 0;
+     margin-top:2px;
+    margin-bottom:2px;
+    margin-right:2px;
+    margin-left:2px;
+}
+.addToCart
+{
+	border: solid 1px grey;
+    margin-left :15px;
+    width: 260px;
+    height: 35px;
+    font-size: 15px;
+    outline: 0;
+}
+.toggleButtons
+{
+    margin-left :15px;
+    border: solid 1px grey;
+    width: 260px;
+    height: 35px;
+}
+.counterSpan
+{
+	margin-left:12px;
+	font-size:15px;
+	display: inline-block;
+    vertical-align: middle;
+}
+.price
+{
+	font-size:20px;
+	margin-left:8px;
+}
+.manf_id
+{
+	color:grey;
+	font-size:15px;
+}
+.availabilitySpan
+{
+	font-size:12px;
+}
