@@ -1,6 +1,7 @@
 
 body{
 font-family: monospace;
+overflow:scroll;
 }
 .navbar
 {
@@ -47,9 +48,11 @@ font-family: monospace;
 #proceedToBilling
 {
     float:right;
+    width:100px;
 }
 #cardDetailsBtn
 {
+	width:100px;
     float:right;
 }
 #billingCardHolderName
@@ -81,4 +84,59 @@ font-family: monospace;
 {
     margin-left: 10em;
 
+}
+#billingAddressBtn
+{
+	float:right;
+}
+#addressTitleBar
+{
+	outline:0;
+	margin-left: 200px;
+    width: 500px;
+    height:50px;
+    padding:20px;
+    box-shadow: 2px 2px 2px 1px grey;
+}
+#toggleDivInfo
+{
+	cursor:pointer;
+	width:20px;
+	height:20px;
+    float:right;
+	margin-bottom:20px;
+}
+#cardInfo
+{
+	outline:0;
+	margin-left: 200px;
+    width: 500px;
+    height:50px;
+    padding:20px;
+    box-shadow: 2px 2px 2px 1px grey;
+}
+span
+{
+	outline:0;
+}
+#titleShipping
+{
+	font-size:12px;
+	text-align:center;
+	font-weight:bold;
+	margin-left:150px;
+}
+#titlePayment
+{
+	font-size:12px;
+	text-align:center;
+	font-weight:bold;
+	margin-left:150px;	
+}
+#titleBilling
+{
+	font-size:12px;
+	text-align:center;
+	font-weight:bold;
+	margin-left:150px;		
 }

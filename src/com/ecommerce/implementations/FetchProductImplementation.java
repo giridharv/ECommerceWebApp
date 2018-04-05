@@ -42,4 +42,50 @@ public class FetchProductImplementation
 	}
 	  return jsonArray;
   }
+  
+  public  ArrayNode getAllProducts(String[] skuList)
+  {
+	  DBConnector connector=new DBConnector();
+	  Connection con=connector.getConnection();
+	  String query = buildQuery(skuList); 
+	  System.out.println(query);
+	  PreparedStatement pstmt;
+	  ObjectMapper objectMapper = new ObjectMapper();
+	  ArrayNode jsonArray = objectMapper.createArrayNode();
+	try {
+		pstmt = con.prepareStatement(query);
+		ResultSet rs;
+		con = connector.getConnection();
+	    rs = pstmt.executeQuery(query);
+	    while(rs.next())
+		{
+	    	ObjectNode product = objectMapper.createObjectNode();
+	    	product.put("sku", rs.getString("sku"));
+	    	product.put("vendorName", rs.getString("vendorname"));
+	    	product.put("vendorModel", rs.getString("vendorModel"));
+	    	product.put("retail", rs.getString("retail"));
+	    	product.put("quantity", rs.getString("quantity"));
+	    	product.put("image", rs.getString("image"));
+		    jsonArray.add(product);
+		}
+	} catch (SQLException e1) {
+		// TODO Auto-generated catch block
+		e1.printStackTrace();
+	}
+	  return jsonArray;
+  }
+  
+  
+  public String buildQuery(String[] skuList)
+  {
+	  StringBuilder queryString = new StringBuilder();
+	  queryString.append("SELECT sku,vendor.name as vendorname,vendorModel,retail,quantity,image FROM product,vendor,category where venID=vendor.id and catID = category.ID AND sku IN(");
+	  int i=0;
+	  for(;i<skuList.length-1;i++)
+	  {
+		  queryString.append('\'').append(skuList[i]).append('\'').append(",");
+	  }
+	  queryString.append('\'').append(skuList[i]).append('\'').append(")");
+	  return queryString.toString().trim();
+  }
 }

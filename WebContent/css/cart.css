@@ -1,0 +1,161 @@
+body{
+    font-family: monospace;
+    overflow:scroll;
+}
+.navbar
+{
+    box-shadow: 5px 2px 5px 2px grey;
+    outline:0;
+}
+.navbar-container
+{
+/*	position:fixed;*/
+	z-index:100;
+	width:100%;
+	background:#fff;
+}
+#searchBar
+{
+    text-align: center;
+    margin-right: 600px;
+    width: 500px;
+    background: url("../html/search_3_50x50_1_30x30.png") left no-repeat;
+    outline:0;
+}
+#cart{
+    outline:0;
+    margin-left: 10px;
+}
+#cartQuantity
+{
+    margin-top: -25px;
+    margin-left: -5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ef9314;
+    color: white;
+    text-align: center;
+
+}
+.form-inline
+{
+    /*text-align: center;*/
+    margin-left: 5em;
+}
+#cartTitle
+{
+    font-size:25px;
+	margin-left:500px;
+	display:inline-block;
+}
+#goShopping
+{
+	display:inline-block;
+	margin-left:450px;
+}
+#placeOrder
+{
+	margin-left:1050px;
+	width:150px;
+}
+#cartItemsDiv
+{
+	  border:solid 1px #CCCCCC;
+	  width:700px;
+	  margin-left:500px;
+	  background-color:#FFF;  
+}
+.card
+{
+  border:none;
+  width: 500px;
+  height:150px;
+  background-color:#FFF;
+}
+
+.deleteItem
+{
+  cursor:pointer;
+  color:#2979ff;
+  border:solid 1px transparent;
+  background-color:#FFF;
+  width:120px;
+  outline:none;
+  margin-left:200px;
+  display:inline-block;
+  padding:5px;
+}
+.deleteItem:hover
+{
+  background:#e1f5fe;
+  border:solid 1px #e1f5fe;
+}
+.img_card
+{
+  padding-top:10px;
+  height:200px;
+  width:700px;
+  display:inline-block;
+  
+}
+.productImage
+{
+  cursor:pointer;
+  padding-top:20px;
+  margin-left:14px;
+  height:80px;
+  width:100px;
+  float:left;
+  display:inline-block;
+}
+
+.productTitle
+{
+  cursor:pointer;
+  margin-left:100px;
+  padding-top:30px;
+  vertical-align:middle;
+  display:inline-block;
+  height:30px;
+  font-weight:bold;
+  font-size:15px;
+}
+.cartQty
+{
+	width:100px;
+	display:inline-block;
+    border:solid 1px grey;
+    font-size:0px;
+}
+
+.priceField
+{
+  margin-left:100px;
+  padding-top:30px;
+  vertical-align:middle;
+  display:inline-block;
+  height:30px;
+  font-size:16px;
+	
+}
+.form-control
+{
+	width:60px;
+	margin-left:600px;
+	margin-bottom:20px;	
+}
+#goToHomeScreen
+{
+	font-size:20px;
+	
+}
+#emptyTextTag
+{
+	margin-left:200px;
+}
+#checkText
+{
+	font-size:18px;
+	margin-left:230px;
+}

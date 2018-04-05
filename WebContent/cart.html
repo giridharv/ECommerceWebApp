@@ -7,8 +7,8 @@
     <script src="library/jquery-ui.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/productPage.css">
-    <script src="js/product.js"></script>
+    <link rel="stylesheet" href="css/cart.css">
+    <script src="js/cart.js"></script>
 </head>
 <body>
 <div>
@@ -21,14 +21,11 @@
     </nav>
 </div>
 <br /><br />
-<span id="productTitle"></span><br />
-<div class="container" id="productDisplay">
-<img src="" href="#" id="productImage"/></div>
-<div class="container" id="productExtras"></div>
-<div class="container" id="productDescription"><p id="aboutProd">About the Product</p>
-<span id="prod_description"></span></div>
-<div class="container" id="productFeatures"><p id="featuresProd">Features</p>
-   
-</div>
+<div class="headerDiv"><span id ="cartTitle">Cart</span><button type="button" class="btn btn-primary" id="goShopping" value="submit">CONTINUE SHOPPING</button></div>
+<br />
+<div id="cartItemsDiv">
+</div> 
+<br /><br />
+<button type="button" class="btn btn-primary" id="placeOrder" value="submit">PLACE ORDER</button>  
 </body>
 </html>

@@ -13,7 +13,7 @@
 <body>
 <div class="navbar-container">
     <nav class ="navbar navbar-light justify-content-between">
-        <a href ="#" class ="navbar-brand">@SoundComponent</a>
+        <a href ="#" class ="navbar-brand" id="comp_logo">@SoundComponent</a>
         <form class="form-inline">
             <input type="text" placeholder="Search" class="form-control" id="searchBar" />
             <input type="image" src="html/shopping-cart_2_30x30.png" id="cart"/>
@@ -25,38 +25,47 @@
     <br />
     <label id="brandLabels">Brand</label>
     <br /><br/>
-    <input type="radio" name="brand" id="brand1">
+    <input class="brandCheckBoxGroup" type="checkbox" name="brand" id="brand1" value ="Bose">
     <label for="brand1" id="brandName_1">Bose</label>
     <br />
-    <input type="radio" name="brand" id="brand2">
+    <input class="brandCheckBoxGroup" type="checkbox" name="brand" id="brand2" value ="Klipsch">
     <label for="brand2" id="brandName_2">Klipsch</label>
     <br />
-    <input type="radio" name="brand" id="brand3">
+    <input class="brandCheckBoxGroup" type="checkbox" name="brand" id="brand3" value ="Polk Audio">
     <label  for="brand3" id="brandName_3">Polk Audio</label>
     <br />
-    <input type="radio" name="brand" id="brand4">
+    <input class="brandCheckBoxGroup" type="checkbox" name="brand" id="brand4" value ="Sony">
     <label for="brand4" id="brandName_4">Sony</label>
     <br /><br /><br />
 
     <label id="categoryLabels">Category</label>
     <br /><br/>
-    <input type="radio" name="category" id="category1">
+    <input class="categoryCheckBoxGroup" type="checkbox" name="category" id="category1" value ="Bookshelf Speakers"> 
     <label for="category1" id="categoryName_1">Bookshelf Speakers</label>
     <br />
-    <input type="radio" name="category" id="category2">
+    <input class="categoryCheckBoxGroup" type="checkbox" name="category" id="category2" value ="Floor Speakers">
     <label for="category2" id="categoryName_2">Floor Speakers</label>
     <br />
-    <input type="radio" name="category" id="category3">
+    <input class="categoryCheckBoxGroup" type="checkbox" name="category" id="category3" value ="In Ceiling Speakers">
     <label  for="category3" id="categoryName_3">In Ceiling Speakers</label>
     <br /><br/><br />
 
     <label id="availabilityLabels">Availability</label>
     <br /><br/>
-    <input type="radio" name="availability" id="availabilityLabel1">
+    <input class="availabilityCheckBoxGroup" type="checkbox" name="availability" id="availabilityLabel1" value ="In Stock">
     <label for="availabilityLabel1" id="availabilityName_1">In Stock</label>
     <br />
-    <input type="radio" name="availability" id="availabilityLabel2">
+    <input class="availabilityCheckBoxGroup" type="checkbox" name="availability" id="availabilityLabel2" value ="Coming Soon">
     <label for="availabilityLabel2" id="availabilityName_2">Coming Soon</label>
+    <br /><br /><br />
+    
+    <label id="sortLabels">Sort</label>
+    <br /><br/>
+    <input class="sortCheckBoxGroup" type="checkbox" name="sortPrice" id="sortLabel1" value ="Price Low to High">
+    <label for="sortLabel1" id="sortName_1">Price Low to High</label>
+    <br />
+    <input class="sortCheckBoxGroup" type="checkbox" name="sortPrice" id="sortLabel2" value ="Price High to Low">
+    <label for="sortLabel2" id="sortName_2">Price High to Low</label>
 </div>
 <br />
 <div class="container" id="productsDiv">

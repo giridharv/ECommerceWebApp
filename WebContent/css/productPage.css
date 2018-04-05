@@ -1,28 +1,31 @@
-#productDisplay
+
+body
 {
-    height: 700px;
+	font-family:monospace;
+	overflow:scroll;
+}#productDisplay
+{
+    height: 500px;
     width:900px;
-    margin-left: 250px;
-    margin-top: 0;
-    display: inline-block;
-    border-right: solid 1px grey;
-    overflow:hidden;
-    border-bottom: solid 1px grey;
-/*    padding: 10px;*/
+    margin-left: 200px;
+/*    display: inline-block;*/
+    border-right: solid 1px #CCCCCC;
+    border-bottom: solid 1px #CCCCCC;
+    padding-left: 200px;
+    padding-top: 150px;
+    float:left;
 }
 #productExtras
 {
     padding: 10px;
-    height:700px;
-    width: 200px;
-    margin-top: 20px;
-    /*margin-left: 200px;*/
-    display: inline-block;
+    width: 300px;
+    /*margin-top: 20px;*/
+    margin-right:300px;
     /*border-bottom: solid 1px grey;*/
 }
 .navbar
 {
-    box-shadow: 5px 2px 5px 2px grey;
+    box-shadow: 5px 2px 5px 2px #CCCCCC;
 }
 .navbar-container
 {
@@ -47,15 +50,79 @@
 {
     width:700px;
     margin-left: 250px;
-    font-weight: bold;
 }
 #productDescription
 {
-    margin-top: 50px;
-    margin-left: 250px;
+	display:inline-block;
+    margin-top:40px;
+    margin-left: 200px;
+    width:900px;
+    font-size:14px;  
 }
 #productFeatures
 {
-    margin-top: 100px;
-    margin-left: 250px;
+    margin-top: 50px;
+    margin-left: 200px;
+    font-size:14px;    
+}
+#productTitle
+{
+	margin-left:250px;
+    font-size:18px;
+	
+}
+#featuresProd
+{
+	font-weight: bold;	
+	font-size:18px;
+	
+}
+#aboutProd
+{
+	font-weight: bold;
+	font-size:18px;
+}
+.counterSpan
+{
+	margin-left:15px;
+	font-size:18px;
+	display: inline-block;
+    vertical-align: middle;
+    border:solid 1px #CCCCCC;
+    height:30px;
+    width:50px;
+    padding-left:15px;
+}
+
+.price
+{
+	padding-left:28px;
+	font-size:20px;
+	font-weight:bold;
+    /*margin-left:8px;*/
+}
+
+.textForQty
+{
+	padding-left:20px;
+	font-size:20px;
+}
+#dropDownSelect
+{
+	width:100px;
+	margin-left:60px;
+	padding-left:35px;
+}
+
+#cartQuantity
+{
+    margin-top: -25px;
+    margin-left: -5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ef9314;
+    color: white;
+    text-align: center;
+
 }

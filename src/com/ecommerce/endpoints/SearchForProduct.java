@@ -7,19 +7,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.ecommerce.implementations.FetchProductImplementation;
+import com.ecommerce.implementations.SearchForProductImplementation;
 
 /**
- * Servlet implementation class FetchProducts
+ * Servlet implementation class SearchForProduct
  */
-@WebServlet("/fetchProducts")
-public class FetchProducts extends HttpServlet {
+@WebServlet("/search")
+public class SearchForProduct extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public FetchProducts() {
+    public SearchForProduct() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,20 +29,7 @@ public class FetchProducts extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		if(request.getParameterValues("skuList[]")!=null)
-		{
-			System.out.println("Not null");
-			String[] skuList = request.getParameterValues("skuList[]");
-			response.setContentType("application/json");
-			response.getWriter().println(new FetchProductImplementation().getAllProducts(skuList));		
-		}
-		else
-		{
-			System.out.println("From null");
-			response.setContentType("application/json");
-			response.getWriter().println(new FetchProductImplementation().getAllProducts());	
-		}
-	
+		response.getWriter().println(new SearchForProductImplementation().getAllProducts(request.getParameter("filter")));
 	}
 
 	/**

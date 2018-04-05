@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="/ECommerce/library/jquery.js"></script>
-    <script src="/ECommerce/library/jquery-ui.js"></script>
+    <script src="library/jquery.js"></script>
+    <script src="library/jquery-ui.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="/ECommerce/src/css/shippingPage.css">
-    <script src="/ECommerce/js/shippingPage.js"></script>
+    <link rel="stylesheet" href="css/shippingPage.css">
+    <script src="js/shippingPage.js"></script>
 </head>
 <body>
 <div>
@@ -31,9 +31,9 @@
     <button type="button" class="btn btn-primary" id="submitOrder">PLACE ORDER</button>
 
 </div>
-
-<div class="card" id="shippingForm">
+<div class="headerCard" id="addressTitleBar"><span>Shipping Information</span><img src="html/showMore.png" id="toggleDivInfo"></div><div class="card" id="shippingForm">
     <div class="card-body">
+        <span id="titleShipping">Shipping Information</span><br /><br />
         <label id="shipLabelName">Name</label>
         <input type="text" id = "shipFormName" class="form-control"/>
         <br />
@@ -114,8 +114,9 @@
     </div>
 </div>
 <br />
-<div class="card" id="creditCardForm">
+<div class="headerCard" id="cardInfo"><span>Payment Information</span><img src="html/showMore.png" id="toggleDivInfo"></div><div class="card" id="creditCardForm">
     <div class="card-body">
+        <span id="titlePayment">Payment Information</span><br /><br />
         <label id="labelBillingName">Name</label>
         <input type="text" class="form-control" id="billingCardHolderName"/>
         <br />
@@ -140,7 +141,9 @@
 </div>
 <br />
 <div class ="card" id = "billingForm">
+
     <div class="card-body">
+        <span id="titleBilling">Billing Information</span><br /><br />
         <label id="labelBillingStreetAddress">Address Line 1</label>
         <input type="text" id = "billingFormStreetAddress" class="form-control"/>
         <br />

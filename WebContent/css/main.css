@@ -1,5 +1,6 @@
 body{
     font-family: monospace;
+    overflow:scroll;
 }
 .navbar
 {
@@ -14,20 +15,22 @@ body{
 }
 .card
 {
-	margin-top:80px;
-    margin-left: 60px;
+	margin-top:90px;
+    margin-left: 40px;
     border: none;
-    height : 400px;
+    height : 380px;
     width:300px;
     display:inline-block;
     cursor:pointer;
 }
+
 img
 {
-    padding-top:5px;
+    padding-top:15px;
+    padding-left:30px;
     margin-left: 45px;
-    width:200px;
-    height:195px;
+    width:140px;
+    height:140px;
 }
 
 #labelForAvailability
@@ -53,15 +56,16 @@ img
 }
 #labelContainer
 {
-	position:fixed;
+    position:fixed;
 	margin-top:60px;
 	padding-left:30px;
-    border: solid thin grey ;
-    width: 330px;
+	border-right:solid 1px #CCCCCC;
+    width: 300px;
     float: left;
-    display:block;
     height:100vh;
+    display:block;
 }
+
 #brandLabels
 {
     font-weight: bold;
@@ -70,7 +74,7 @@ img
 {
     font-weight: bold;
 }
-#brandName_1,#brandName_2,#brandName_3,#brandName_4,#categoryName_1,#categoryName_2,#categoryName_3,#availabilityName_1,#availabilityName_2
+#brandName_1,#brandName_2,#brandName_3,#brandName_4,#categoryName_1,#categoryName_2,#categoryName_3,#availabilityName_1,#availabilityName_2,#sortName_1,#sortName_2
 {
     font-size: 15px;
 }
@@ -78,6 +82,10 @@ img
 #availabilityLabels
 {
     font-weight: bold;
+}
+#sortLabels
+{
+	font-weight: bold;
 }
 #cartQuantity
 {
@@ -97,7 +105,10 @@ img
 }
 #productsDiv
 {
-	position:relative;
+	margin-left:400px;
+	min-width:960px;
+	right:0;
+	top:0;
 }
 .increaseCartQty
 {
@@ -109,6 +120,7 @@ img
     margin-top:2px;
     margin-bottom:2px;
     margin-right:2px;
+	cursor:pointer;
 }
 .deleteFromCart
 {
@@ -121,6 +133,7 @@ img
     margin-bottom:2px;
     margin-right:2px;
     margin-left:2px;
+    cursor:pointer;
 }
 .addToCart
 {
@@ -134,9 +147,10 @@ img
 .toggleButtons
 {
     margin-left :15px;
-    border: solid 1px grey;
+    border: solid 1px #CCCCCC;
     width: 260px;
     height: 35px;
+    cursor:default;
 }
 .counterSpan
 {
@@ -158,4 +172,8 @@ img
 .availabilitySpan
 {
 	font-size:12px;
+}
+#emptyResponse
+{
+ margin-left:100px;	
 }
