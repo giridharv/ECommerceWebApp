@@ -34,6 +34,7 @@ public class CreateOrderRequest extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		System.out.println("In from servlet");
 		ObjectMapper objectMapper = new ObjectMapper();
 		Reader reader = new StringReader(request.getParameter("cartObj"));
 		ObjectNode node = objectMapper.readValue(reader, ObjectNode.class);

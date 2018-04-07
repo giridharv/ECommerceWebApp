@@ -48,13 +48,12 @@ public class FetchProductImplementation
 	  DBConnector connector=new DBConnector();
 	  Connection con=connector.getConnection();
 	  String query = buildQuery(skuList); 
-	  System.out.println(query);
-	  PreparedStatement pstmt;
+	  PreparedStatement pstmt=null;
 	  ObjectMapper objectMapper = new ObjectMapper();
 	  ArrayNode jsonArray = objectMapper.createArrayNode();
-	try {
-		pstmt = con.prepareStatement(query);
-		ResultSet rs;
+	  ResultSet rs=null;
+	  try {
+		pstmt = con.prepareStatement(query);	
 		con = connector.getConnection();
 	    rs = pstmt.executeQuery(query);
 	    while(rs.next())
@@ -71,7 +70,20 @@ public class FetchProductImplementation
 	} catch (SQLException e1) {
 		// TODO Auto-generated catch block
 		e1.printStackTrace();
-	}
+	}finally {
+        try {
+            if(rs != null)
+                rs.close();
+            if(pstmt != null)
+                pstmt.close();
+            if(con != null)                   
+        	    con.close();
+            }
+        catch(SQLException e) {
+            e.printStackTrace();
+            }
+  }
+	
 	  return jsonArray;
   }
   

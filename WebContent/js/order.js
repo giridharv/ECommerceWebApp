@@ -49,23 +49,21 @@ $(document).ready(function()
 	         	     		$(elem).appendTo($('#orderDetails')); 
 	         	     		var price= calculateProductRetail(cartObj[response[i].sku]["qty"],response[i].retail);
 	         	     		$('#priceField_'+response[i].sku).text('$'+ price)
-	         	     		productPriceObj[response[i].sku] = response[i].retail;
+	         	     		productPriceObj[response[i].sku] = price;
 	      		}
 	              calculateTotalAmount();
+	              localStorage.removeItem('cartItems');
+	              localStorage.removeItem('totalCartCost');
 	      }     
 	  	function calculateProductRetail(qty,retail)
 		{
-			return qty*retail;  
+			return (qty*retail).toFixed(2);  
 		}
 	      
 	  	function calculateTotalAmount()
 	  	{
-	  		var sum=0;
-	  		for(var key in productPriceObj)
-	  		{
-	  		  sum+=parseInt(productPriceObj[key]);	
-	  		}
-	  		$('#priceTotal').text("$  " +sum)
+	  		var total =localStorage.getItem('totalCartCost');
+	  		$('#priceTotal').text("$  " + parseFloat(total).toFixed(2))
 	  	}
 	      
 	      

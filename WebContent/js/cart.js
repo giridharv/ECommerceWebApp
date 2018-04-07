@@ -10,7 +10,6 @@ $(document).ready(function(){
 			{
 			if(cartObj[key]["qty"]!=0)
 				{
-				console.log(cartObj[key]["qty"])
 				skuList.push(key);	
 				}
 			
@@ -76,9 +75,21 @@ $(document).ready(function(){
        	     		productPriceObj[response[i].sku] = response[i].retail;
     		}
     }
+	
 	function calculateProductRetail(qty,retail)
 	{
 		return qty*retail;  
+	}
+	
+	function calculateCartTotalCost()
+	{
+	      var cartObj = JSON.parse(localStorage.getItem('cartItems'));
+	      var sum=0;
+	      for(var key in cartObj)
+	    	  {
+	    	    sum+= calculateProductRetail(cartObj[key]["qty"],productPriceObj[key]);
+	    	  }
+         localStorage.setItem("totalCartCost",sum);
 	}
 	$('#homeScreen').bind('click',function()
 			{
@@ -87,24 +98,38 @@ $(document).ready(function(){
 	
 	function generateDropDown(qty,sku,retail)
     {
+		console.log(qty)
     	var dropDownElement="";
     	dropDownElement+='<div class="form-group" id="dropDownDiv"><select class="form-control dropDownSelect" id=\"dropDownSelect_'+sku+'\">';
-    	for(var i=0;i<=qty;i++)
+    	for(var i=1;i<=qty;i++)
     		{
     		dropDownElement+='<option value=\"'+i+'\"'+'>'+i+'</option>';
     		}
     	dropDownElement+='</select></div>'
     	return dropDownElement;
     }
+	
 	   $(document).on('click', ".dropDownSelect", function() {
   	      var cartObj = JSON.parse(localStorage.getItem('cartItems'));
 	      var sku =this.id.split('_')[1];
 	      cartObj[sku] ={};
-	      cartObj[sku]["qty"]=parseInt($('#dropDownSelect_'+this.id.split('_')[1]).val()); 
-    	  localStorage.setItem('cartItems',JSON.stringify(cartObj));
+	      var qtyVal = parseInt($('#dropDownSelect_'+sku).val());
+	      if(qtyVal!=0)
+	    		  {
+	    	  		cartObj[sku]["qty"]=qtyVal; 
+	    	  		localStorage.setItem('cartItems',JSON.stringify(cartObj)); 	  
+	    	  		 var price= calculateProductRetail(cartObj[sku]["qty"],productPriceObj[sku]);
+	    		     $('#priceField_'+sku).text('$'+ price)
+	    		  }
+	      else
+	    	  {
+	    	    delete cartObj[sku];
+	    	    localStorage.setItem('cartItems',JSON.stringify(cartObj)); 	
+	    	    var price= calculateProductRetail(0,productPriceObj[sku]);
+	  	        $('#priceField_'+sku).text('$'+ price)
+	    	  }
     	  updateCurrentCartCountValue();
-    	  var price= calculateProductRetail(cartObj[sku]["qty"],productPriceObj[sku]);
-	      $('#priceField_'+sku).text('$'+ price)
+    	 
 	    });
 	   
 	   $(document).on('click', ".deleteItem", function() {
@@ -133,25 +158,12 @@ $(document).ready(function(){
 	    	window.location="productPage.html";
 	   });   		
 	  
-		function createOrder()
-	    {
-			var cartObj = JSON.parse(localStorage.getItem('cartItems'));
-	        $.ajax( {
-	            url: "/ECommerceJava/createOrderRequest",
-	            type: "GET",
-	            data:{cartObj:JSON.stringify(cartObj)},
-	            success: function(response) {
-	            	//displayProduct(response);
-	            	//proceed to delete cart items?
-	            	orderSummary={
-	            			sku:{modelname:{},qty:{},price:{}}
-	            	}
-	            },
-	            error: function(response) {
-	                alert(response.text);
-	            }
-	        });
-	    }
+		
+		$('#placeOrder').bind('click',function()
+				{
+					calculateCartTotalCost();
+			        window.location="shippingPage.html";
+				})
 	    	
 	   
 	   

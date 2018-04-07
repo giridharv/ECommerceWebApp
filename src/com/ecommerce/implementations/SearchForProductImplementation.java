@@ -19,12 +19,12 @@ public class SearchForProductImplementation {
 		  StringBuilder query =new StringBuilder();
 		  query.append("SELECT sku,vendor.name as vendorname,vendorModel,retail,quantity,image FROM product INNER JOIN vendor ON venID=vendor.id WHERE description LIKE")
 		  .append("'%").append(searchString).append("%'").append("OR features LIKE").append("'%").append(searchString).append("%'");
-		  PreparedStatement pstmt;
+		  PreparedStatement pstmt=null;
+		  ResultSet rs=null;
 		  ObjectMapper objectMapper = new ObjectMapper();
 		  ArrayNode jsonArray = objectMapper.createArrayNode();
 		try {
 			pstmt = con.prepareStatement(query.toString());
-			ResultSet rs;
 			con = connector.getConnection();
 		    rs = pstmt.executeQuery(query.toString());
 		    while(rs.next())
@@ -42,6 +42,19 @@ public class SearchForProductImplementation {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
+		finally {
+	        try {
+	            if(rs != null)
+	                rs.close();
+	            if(pstmt != null)
+	                pstmt.close();
+	            if(con != null)                   
+	        	    con.close();
+	            }
+	        catch(SQLException e) {
+	            e.printStackTrace();
+	            }
+	  }
 		  return jsonArray;
 	  }
 }

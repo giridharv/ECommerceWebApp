@@ -276,3 +276,16 @@ span
 	font-weight:bold;
 	margin-left:150px;		
 }
+
+#orderTotal,#cartItemQty,#tax,#shippingCharge,#total
+{
+	display:inline-block;
+	font-size:16px;
+	font-weight:bold;
+}
+#sp_orderTotal,#sp_cartItemQty,#sp_tax,#sp_shippingCharge,#sp_Total
+{
+	font-size:16px;
+	float:right;
+	display:inline-block;
+}

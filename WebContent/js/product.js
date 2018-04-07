@@ -88,8 +88,18 @@ $(document).ready(function () {
         	      var cartObj = JSON.parse(localStorage.getItem('cartItems'));
         	      var sku =localStorage.getItem('product');
         	      cartObj[sku] ={};
-        	      cartObj[sku]["qty"]=parseInt($('#dropDownSelect').val()); 
-            	  localStorage.setItem('cartItems',JSON.stringify(cartObj));
+        	      var qtyVal = parseInt($('#dropDownSelect').val());
+        	      console.log(qtyVal!=0);
+        	      if(qtyVal!=0)
+        	    		  {
+        	    	  		cartObj[sku]["qty"]=parseInt($('#dropDownSelect').val()); 
+        	    	  		localStorage.setItem('cartItems',JSON.stringify(cartObj)); 	  
+        	    		  }
+        	      else
+        	    	  {
+        	    	    delete cartObj[sku];
+        	    	    localStorage.setItem('cartItems',JSON.stringify(cartObj)); 	
+        	    	  }
             	  updateCurrentCartCountValue();
     			})
     }

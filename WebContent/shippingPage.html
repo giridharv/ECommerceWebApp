@@ -23,12 +23,25 @@
 <br /><br /><br /><br />
 <div class="card" id="orderSummary">
     <ul>
-        <li>Order Summary</li><h4>Hello Summary</h4>
-        <li>Item(s)</li><h4>Hello Summary</h4>
-        <li>Tax</li><h4>Hello Summary</h4>
-        <li>Shipping Fee</li><h4>Hello Ship</h4>
+    <div>
+        <li id="cartItemQty">Item(s)</li><span id="sp_cartItemQty">Hello</span>
+    </div>
+    <div>
+        <li id="tax">Tax</li><span id="sp_tax">Hello</span>
+    </div>
+    <div>
+        <li id ="shippingCharge">Shipping Fee</li><span id="sp_shippingCharge">Hello</span>
+    </div>
+
+     <div>
+        <li id="total">Total</li><span id="sp_Total">Hello</span>
+    </div><br />
+        <div>
+        <li id="orderTotal">Order Summary</li><span id="sp_orderTotal">Hello</span>
+    </div>
     </ul>
-    <button type="button" class="btn btn-primary" id="submitOrder">PLACE ORDER</button>
+    <br /><br />
+    <button type="button" class="btn btn-primary" id="submitOrder">PLACE ORDER</button>    <button type="button" class="btn btn-primary" id="cancelOrder">CANCEL</button>
 </div>
 <div class="headerCard" id="billingAddressTitleBar"><span>Billing Address Information</span><img src="html/showMore.png" id="toggleDivInfoBilling"></div><div class ="card" id = "billingForm">
     <div class="card-body">
@@ -126,27 +139,27 @@
         <span id="titlePayment">Payment Information</span><br /><br />
         <label id="labelBillingName">Name</label>
         <div>
-        <input type="text" class="form-control" id="billingCardHolderName"/><span id="err_msg_cardHolderName">Heuulo</span>
+        <input type="text" class="form-control" id="billingCardHolderName"/><span id="err_msg_cardHolderName"></span>
         </div>
         <br />
         <label id ="labelBillingCard">Card Number</label>
         <div>
-        <input type="number" class="form-control" id="billingCardNumber"/><span id="err_msg_cardNumber">Heuuo</span>
+        <input type="number" class="form-control" id="billingCardNumber"/><span id="err_msg_cardNumber"></span>
         </div>
         <br />
         <label id ="labelBillingCardExpiryMonth">Expiration Month</label>
         <div>
-        <input type="number" class="form-control" id="billingCardMonth"/><span id="err_msg_cardMonth">Heuuo</span>
+        <input type="number" class="form-control" id="billingCardMonth"/><span id="err_msg_cardMonth"></span>
         </div>
         <br />
         <label id ="labelBillingCardExpiryYear">Expiration Year</label>
         <div>
-        <input type="number" class="form-control" id="billingCardYear"><span id="err_msg_cardYear">Heuuo</span>
+        <input type="number" class="form-control" id="billingCardYear"><span id="err_msg_cardYear"></span>
         </div>
         <br />
         <label id ="labelBillingCVV">CVV</label>
         <div>
-        <input type="number" class="form-control" id="billingCardCVV"/><span id="err_msg_cardCVV">Heuuo</span>
+        <input type="number" class="form-control" id="billingCardCVV"/><span id="err_msg_cardCVV"></span>
         </div>
         <br />
         <div class="form-check">
@@ -164,7 +177,7 @@
         
         <label id="shipLabelStreetAddress">Address Line 1</label>
         <div>
-        <input type="text" id = "shipFormStreetAddress" class="form-control"/><span id="err_msg_shippingaddrLine1">ff</span>
+        <input type="text" id = "shipFormStreetAddress" class="form-control"/><span id="err_msg_shippingaddrLine1"></span>
         </div>
         <br />
         <label id="shipLabelApartmentNumber">Address Line 2</label>
@@ -174,12 +187,11 @@
         <br />
         <label id="shipLabelCity">City</label>
         <div>
-        <input type="text" id = "shipFormCity" class="form-control"/><span id="err_msg_shippingCity">fff</span>
+        <input type="text" id = "shipFormCity" class="form-control"/><span id="err_msg_shippingCity"></span>
         </div>
         <br />
         <div class="form-group">
             <label for="shipFormState" id="shipLabelState">State</label><br />
-            <span id="err_msg_shipState"></span>
             <select id="shipFormState" class="form-control">
                 <option value="0">None</option>
                 <option value="1">Alabama</option>
@@ -233,17 +245,17 @@
                 <option value="49">Wisconsin</option>
                 <option value="50">Wyoming</option>
             </select>
-            <span id="err_msg_shippingFormState">fff</span>
+            <span id="err_msg_shippingFormState"></span>
         </div>
         <br />
         <label id="shipLabelZipcode">Zipcode</label>
         <div>
-        <input type="text" class="form-control" id = "shipFormZipcode" /><span id="err_msg_shippingZipcode">ff</span>
+        <input type="text" class="form-control" id = "shipFormZipcode" /><span id="err_msg_shippingZipcode"></span>
         </div>
         <br />
         <label id="shipLabelPhoneNumber">Phone Number</label>
         <div>
-        <input type="number" class="form-control" id = "shipFormPhoneNumber" /><span id="err_msg_shippingPhone">ff</span>
+        <input type="number" class="form-control" id = "shipFormPhoneNumber" /><span id="err_msg_shippingPhone"></span>
         </div>
         <br />
         <button type="button" class="btn btn-primary" id="proceedToBilling">Proceed</button>

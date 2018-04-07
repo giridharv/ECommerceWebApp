@@ -97,12 +97,12 @@ public class FetchProductWithFilterImplementation {
 		  Connection con=connector.getConnection();
 		  String query = buildQuery(brand,category,availability,price); 
 		  System.out.println("From Error" + query);
-		  PreparedStatement pstmt;
+		  PreparedStatement pstmt=null;
+		  ResultSet rs=null;
 		  ObjectMapper objectMapper = new ObjectMapper();
 		  ArrayNode jsonArray = objectMapper.createArrayNode();
 		try {
 			pstmt = con.prepareStatement(query);
-			ResultSet rs;
 			con = connector.getConnection();
 		    rs = pstmt.executeQuery(query);
 		    while(rs.next())
@@ -120,6 +120,19 @@ public class FetchProductWithFilterImplementation {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
+		finally {
+	        try {
+	            if(rs != null)
+	                rs.close();
+	            if(pstmt != null)
+	                pstmt.close();
+	            if(con != null)                   
+	        	    con.close();
+	            }
+	        catch(SQLException e) {
+	            e.printStackTrace();
+	            }
+	  }
 		  return jsonArray;
 	  }
 	

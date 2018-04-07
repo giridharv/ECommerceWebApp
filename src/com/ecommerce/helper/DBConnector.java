@@ -28,15 +28,4 @@ public class DBConnector {
 	} 
 	return connection;
  }
-	
-	public void closeConnection()
-	{
-		try {
-			connection.close();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-	}
 }
