@@ -1,0 +1,88 @@
+
+body{
+font-family: monospace;
+overflow:scroll;
+}
+.navbar
+{
+    box-shadow: 5px 2px 5px 2px grey;
+    outline:0;
+}
+.card
+{
+	margin-top:50px;
+    width: 600px;
+    border:none;
+}
+#company-logo
+{
+    font-size: x-large;
+}
+#titleBar
+{
+	pointer-events:none;
+	pointer:none;
+}
+#orderDetails
+{
+	border:dashed 1px #CCC;
+	width:650px;
+	margin-left:600px;
+}
+.card
+{
+	width:600px;
+	
+}
+#productLabel
+{
+	margin-left:50px;
+}
+#quantityLabel
+{
+	margin-left:170px;
+}
+#priceLabel
+{
+	margin-left:220px;
+}
+.productTitle
+{
+	margin-left:40px;	
+}
+.quantityClass
+{
+	margin-left:180px;
+	text-align:center;
+}
+.img-card
+{
+	width:600px;
+}
+.priceField
+{
+	float:right;
+}
+#summary
+{
+	margin-left:600px;
+	font-weight:bold;
+	font-size:16px;
+}
+#totalAmount
+{
+	margin-left:800px;
+	display:inline-block;
+	font-size:16px;
+}
+#priceTotal
+{
+	margin-left:50px;
+	display:inline-block;
+	font-weight:bold;
+	font-size:16px;
+}
+#orderTotal
+{
+	width:100%;
+}

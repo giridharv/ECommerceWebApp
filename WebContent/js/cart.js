@@ -132,8 +132,27 @@ $(document).ready(function(){
 	    	localStorage.setItem('product',this.id.split('_')[1]);
 	    	window.location="productPage.html";
 	   });   		
-	     		
-	    		
+	  
+		function createOrder()
+	    {
+			var cartObj = JSON.parse(localStorage.getItem('cartItems'));
+	        $.ajax( {
+	            url: "/ECommerceJava/createOrderRequest",
+	            type: "GET",
+	            data:{cartObj:JSON.stringify(cartObj)},
+	            success: function(response) {
+	            	//displayProduct(response);
+	            	//proceed to delete cart items?
+	            	orderSummary={
+	            			sku:{modelname:{},qty:{},price:{}}
+	            	}
+	            },
+	            error: function(response) {
+	                alert(response.text);
+	            }
+	        });
+	    }
+	    	
 	   
 	   
 });

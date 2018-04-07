@@ -17,12 +17,12 @@ public class FetchProductDetailsImplementation {
 		  DBConnector connector=new DBConnector();
 		  Connection con=connector.getConnection();
 		  String query = "SELECT sku,vendor.name as vendorname,vendorModel,description,features,retail,quantity,image FROM product,vendor,category where venID=vendor.id and catID = category.ID and sku=?";
-		  PreparedStatement pstmt;
+		  PreparedStatement pstmt=null;
 		  ObjectMapper objectMapper = new ObjectMapper();
 		  ArrayNode jsonArray = objectMapper.createArrayNode();
-		try {
+		  ResultSet rs=null;
+		  try {
 			pstmt = con.prepareStatement(query);
-			ResultSet rs;
 			con = connector.getConnection();
 		    pstmt.setString(1, sku);
 		    rs = pstmt.executeQuery();
@@ -43,7 +43,19 @@ public class FetchProductDetailsImplementation {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		  //connector.closeConnection();
+		  finally {
+	            try {
+	                if(rs != null)
+	                    rs.close();
+	                if(pstmt != null)
+	                    pstmt.close();
+	                if(con != null)                   
+	            	    con.close();
+	                }
+	            catch(SQLException e) {
+	                e.printStackTrace();
+	                }
+		  }
 		  return jsonArray;
 	  }
 }

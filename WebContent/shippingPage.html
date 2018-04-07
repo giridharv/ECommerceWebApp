@@ -29,25 +29,156 @@
         <li>Shipping Fee</li><h4>Hello Ship</h4>
     </ul>
     <button type="button" class="btn btn-primary" id="submitOrder">PLACE ORDER</button>
-
 </div>
-<div class="headerCard" id="addressTitleBar"><span>Shipping Information</span><img src="html/showMore.png" id="toggleDivInfo"></div><div class="card" id="shippingForm">
+<div class="headerCard" id="billingAddressTitleBar"><span>Billing Address Information</span><img src="html/showMore.png" id="toggleDivInfoBilling"></div><div class ="card" id = "billingForm">
     <div class="card-body">
-        <span id="titleShipping">Shipping Information</span><br /><br />
-        <label id="shipLabelName">Name</label>
-        <input type="text" id = "shipFormName" class="form-control"/>
+        <span id="titleBilling">Billing Information</span><br /><br />
+        <label id="labelBillingStreetAddress">Address Line 1*</label><br />
+        <div>
+        <input type="text" id = "billingFormStreetAddress" class="form-control"/><span id="err_msg_billingaddrLine1"></span>
         <br />
-        <label id="shipLabelStreetAddress">Address Line 1</label>
-        <input type="text" id = "shipFormStreetAddress" class="form-control"/>
+        </div>
         <br />
-        <label id="shipLabelApartmentNumber">Address Line 2</label>
-        <input type="text" id = "shipFormApartmentNumber" class="form-control"/>
+        <label id="labelBillingApartmentNumber">Address Line 2</label>
+        <input type="text" id = "billingFormApartmentNumber" class="form-control"/>
         <br />
-        <label id="shipLabelCity">City</label>
-        <input type="text" id = "shipFormCity" class="form-control"/>
+        <label id="labelBillingCity">City*</label><br />
+        <div>
+        <input type="text" id = "billingFormCity" class="form-control"/><span id="err_msg_billingCity"></span>
+        </div>
         <br />
         <div class="form-group">
-            <label for="shipFormState" id="shipLabelState">State</label>
+            <label for="shipFormState" id="labelBillingState">State*</label><br />
+            <div>
+            <select id="billingFormState" class="form-control">
+                <option value="0">None</option>
+                <option value="1">Alabama</option>
+                <option value="2">Alaska</option>
+                <option value="3">Arizona</option>
+                <option value="4">Arkansas</option>
+                <option value="5">California</option>
+                <option value="6">Colorado</option>
+                <option value="7">Connecticut</option>
+                <option value="8">Delaware</option>
+                <option value="9">Florida</option>
+                <option value="10">Georgia</option>
+                <option value="11">Hawaii</option>
+                <option value="12">Idaho</option>
+                <option value="13">Illinois</option>
+                <option value="14">Indiana</option>
+                <option value="15">Iowa</option>
+                <option value="16">Kansas</option>
+                <option value="17">Kentucky</option>
+                <option value="18">Louisiana</option>
+                <option value="19">Maine</option>
+                <option value="20">Maryland</option>
+                <option value="21">Massachusetts</option>
+                <option value="22">Michigan</option>
+                <option value="23">Minnesota</option>
+                <option value="24">Mississippi</option>
+                <option value="25">Missouri</option>
+                <option value="26">Montana</option>
+                <option value="27">Nebraska</option>
+                <option value="28">Nevada</option>
+                <option value="29">New Hampshire</option>
+                <option value="30">New Jersey</option>
+                <option value="31">New Mexico</option>
+                <option value="32">New York</option>
+                <option value="33">North Carolina</option>
+                <option value="34">North Dakota</option>
+                <option value="35">Ohio</option>
+                <option value="36">Oklahoma</option>
+                <option value="37">Oregon</option>
+                <option value="38">Pennsylvania</option>
+                <option value="39">Rhode Island</option>
+                <option value="40">South Carolina</option>
+                <option value="41">South Dakota</option>
+                <option value="42">Tennessee</option>
+                <option value="43">Texas</option>
+                <option value="44">Utah</option>
+                <option value="45">Vermont</option>
+                <option value="46">Virginia</option>
+                <option value="47">Washington</option>
+                <option value="48">West Virginia</option>
+                <option value="49">Wisconsin</option>
+                <option value="50">Wyoming</option>
+            </select>
+            <span id="err_msg_billingFormState"></span>
+            </div>
+        </div>
+        <br />
+        <label id="labelBillingZipcode">Zipcode*</label><br />
+        <div>
+        <input type="text" class="form-control" id = "billingFormZipcode" /><span id="err_msg_billingZipcode"></span>
+        </div>
+        <br />
+        <label id="labelBillingPhoneNumber">Phone Number*</label>
+        <div>
+        <input type="text" class="form-control" id = "billingFormPhoneNumber" /><span id="err_msg_billingPhone"></span>
+        </div>
+        <br />
+        <button type="button" class="btn btn-primary" id="billingAddressBtn">Proceed</button>
+    </div>
+</div>
+<br />
+<div class="headerCard" id="cardInfo"><span>Payment Information</span><img src="html/showMore.png" id="toggleDivInfoCardInfo"></div><div class="card" id="creditCardForm">
+    <div class="card-body">
+        <span id="titlePayment">Payment Information</span><br /><br />
+        <label id="labelBillingName">Name</label>
+        <div>
+        <input type="text" class="form-control" id="billingCardHolderName"/><span id="err_msg_cardHolderName">Heuulo</span>
+        </div>
+        <br />
+        <label id ="labelBillingCard">Card Number</label>
+        <div>
+        <input type="number" class="form-control" id="billingCardNumber"/><span id="err_msg_cardNumber">Heuuo</span>
+        </div>
+        <br />
+        <label id ="labelBillingCardExpiryMonth">Expiration Month</label>
+        <div>
+        <input type="number" class="form-control" id="billingCardMonth"/><span id="err_msg_cardMonth">Heuuo</span>
+        </div>
+        <br />
+        <label id ="labelBillingCardExpiryYear">Expiration Year</label>
+        <div>
+        <input type="number" class="form-control" id="billingCardYear"><span id="err_msg_cardYear">Heuuo</span>
+        </div>
+        <br />
+        <label id ="labelBillingCVV">CVV</label>
+        <div>
+        <input type="number" class="form-control" id="billingCardCVV"/><span id="err_msg_cardCVV">Heuuo</span>
+        </div>
+        <br />
+        <div class="form-check">
+            <input type="checkbox" id="checkInputForBillingAddress" class="form-check-input">
+            <label for ="checkInputForBillingAddress" class="form-check-label">Shipping Address same as Billing Address  </label>
+        </div>
+        <br />
+        <button type="button" class="btn btn-primary" id="cardDetailsBtn">Save</button>
+    </div>
+</div>
+<br />
+<div class="headerCard" id="addressTitleBarShipping"><span>Shipping Information</span><img src="html/showMore.png" id="toggleDivInfoShipping"></div><div class="card" id="shippingForm">
+    <div class="card-body">
+        <span id="titleShipping">Shipping Information</span><br /><br />
+        
+        <label id="shipLabelStreetAddress">Address Line 1</label>
+        <div>
+        <input type="text" id = "shipFormStreetAddress" class="form-control"/><span id="err_msg_shippingaddrLine1">ff</span>
+        </div>
+        <br />
+        <label id="shipLabelApartmentNumber">Address Line 2</label>
+        <div>
+        <input type="text" id = "shipFormApartmentNumber" class="form-control"/>
+        </div>
+        <br />
+        <label id="shipLabelCity">City</label>
+        <div>
+        <input type="text" id = "shipFormCity" class="form-control"/><span id="err_msg_shippingCity">fff</span>
+        </div>
+        <br />
+        <div class="form-group">
+            <label for="shipFormState" id="shipLabelState">State</label><br />
             <span id="err_msg_shipState"></span>
             <select id="shipFormState" class="form-control">
                 <option value="0">None</option>
@@ -102,125 +233,23 @@
                 <option value="49">Wisconsin</option>
                 <option value="50">Wyoming</option>
             </select>
+            <span id="err_msg_shippingFormState">fff</span>
         </div>
         <br />
         <label id="shipLabelZipcode">Zipcode</label>
-        <input type="text" class="form-control" id = "shipFormZipcode" />
+        <div>
+        <input type="text" class="form-control" id = "shipFormZipcode" /><span id="err_msg_shippingZipcode">ff</span>
+        </div>
         <br />
         <label id="shipLabelPhoneNumber">Phone Number</label>
-        <input type="number" class="form-control" id = "shipFormPhoneNumber" />
+        <div>
+        <input type="number" class="form-control" id = "shipFormPhoneNumber" /><span id="err_msg_shippingPhone">ff</span>
+        </div>
         <br />
         <button type="button" class="btn btn-primary" id="proceedToBilling">Proceed</button>
     </div>
 </div>
-<br />
-<div class="headerCard" id="cardInfo"><span>Payment Information</span><img src="html/showMore.png" id="toggleDivInfo"></div><div class="card" id="creditCardForm">
-    <div class="card-body">
-        <span id="titlePayment">Payment Information</span><br /><br />
-        <label id="labelBillingName">Name</label>
-        <input type="text" class="form-control" id="billingCardHolderName"/>
-        <br />
-        <label id ="labelBillingCard">Card Number</label>
-        <input type="number" class="form-control" id="billingCardNumber"/>
-        <br />
-        <label id ="labelBillingCardExpiryMonth">Expiration Month</label>
-        <input type="number" class="form-control" id="billingCardMonth"/>
-        <label id ="labelBillingCardExpiryYear">Expiration Year</label>
-        <input type="number" class="form-control" id="billingCardYear">
-        <br />
-        <label id ="labelBillingCVV">CVV</label>
-        <input type="number" class="form-control" id="billingCardCVV"/>
-        <br />
-        <div class="form-check">
-            <input type="checkbox" id="checkInputForBillingAddress" class="form-check-input">
-            <label for ="checkInputForBillingAddress" class="form-check-label">Billing Address same as Shipping Address</label>
-        </div>
-        <br />
-        <button type="button" class="btn btn-primary" id="cardDetailsBtn">Save</button>
-    </div>
-</div>
-<br />
-<div class ="card" id = "billingForm">
 
-    <div class="card-body">
-        <span id="titleBilling">Billing Information</span><br /><br />
-        <label id="labelBillingStreetAddress">Address Line 1</label>
-        <input type="text" id = "billingFormStreetAddress" class="form-control"/>
-        <br />
-        <label id="labelBillingApartmentNumber">Address Line 2</label>
-        <input type="text" id = "billingFormApartmentNumber" class="form-control"/>
-        <br />
-        <label id="labelBillingCity">City</label>
-        <input type="text" id = "billingFormCity" class="form-control"/>
-        <br />
-        <div class="form-group">
-            <label for="shipFormState" id="labelBillingState">State</label>
-            <span id="err_msg_billingFormState"></span>
-            <select id="billingFormState" class="form-control">
-                <option value="0">None</option>
-                <option value="1">Alabama</option>
-                <option value="2">Alaska</option>
-                <option value="3">Arizona</option>
-                <option value="4">Arkansas</option>
-                <option value="5">California</option>
-                <option value="6">Colorado</option>
-                <option value="7">Connecticut</option>
-                <option value="8">Delaware</option>
-                <option value="9">Florida</option>
-                <option value="10">Georgia</option>
-                <option value="11">Hawaii</option>
-                <option value="12">Idaho</option>
-                <option value="13">Illinois</option>
-                <option value="14">Indiana</option>
-                <option value="15">Iowa</option>
-                <option value="16">Kansas</option>
-                <option value="17">Kentucky</option>
-                <option value="18">Louisiana</option>
-                <option value="19">Maine</option>
-                <option value="20">Maryland</option>
-                <option value="21">Massachusetts</option>
-                <option value="22">Michigan</option>
-                <option value="23">Minnesota</option>
-                <option value="24">Mississippi</option>
-                <option value="25">Missouri</option>
-                <option value="26">Montana</option>
-                <option value="27">Nebraska</option>
-                <option value="28">Nevada</option>
-                <option value="29">New Hampshire</option>
-                <option value="30">New Jersey</option>
-                <option value="31">New Mexico</option>
-                <option value="32">New York</option>
-                <option value="33">North Carolina</option>
-                <option value="34">North Dakota</option>
-                <option value="35">Ohio</option>
-                <option value="36">Oklahoma</option>
-                <option value="37">Oregon</option>
-                <option value="38">Pennsylvania</option>
-                <option value="39">Rhode Island</option>
-                <option value="40">South Carolina</option>
-                <option value="41">South Dakota</option>
-                <option value="42">Tennessee</option>
-                <option value="43">Texas</option>
-                <option value="44">Utah</option>
-                <option value="45">Vermont</option>
-                <option value="46">Virginia</option>
-                <option value="47">Washington</option>
-                <option value="48">West Virginia</option>
-                <option value="49">Wisconsin</option>
-                <option value="50">Wyoming</option>
-            </select>
-        </div>
-        <br />
-        <label id="labelBillingZipcode">Zipcode</label>
-        <input type="text" class="form-control" id = "billingFormZipcode" />
-        <br />
-        <label id="labelBillingPhoneNumber">Phone Number</label>
-        <input type="number" class="form-control" id = "billingFormPhoneNumber" />
-        <br />
-        <button type="button" class="btn btn-primary" id="billingAddressBtn">Gotcha</button>
-
-    </div>
-</div>
 
 </body>
 </html>

@@ -10,7 +10,7 @@ overflow:scroll;
 .card
 {
     margin-left: 200px;
-    width: 500px;
+    width: 600px;
     box-shadow: 2px 2px 2px 1px grey;
 }
 #company-logo
@@ -20,7 +20,109 @@ overflow:scroll;
 #shipFormState
 {
     width: 200px;
+    display:inline-block;
 }
+#billingFormStreetAddress,#billingFormApartmentNumber,#billingFormCity,#billingFormState,#billingFormZipcode,#billingFormPhoneNumber
+{
+	width:200px;
+}
+#billingFormStreetAddress
+{
+	display:inline-block;
+}
+#err_msg_billingaddrLine1
+{
+	margin-left:40px;
+	display:inline-block;
+}
+#err_msg_shippingaddrLine1
+{
+	margin-left:40px;
+	display:inline-block;
+}
+
+#billingFormCity
+{
+	display:inline-block;
+}
+#err_msg_billingCity
+{
+	margin-left:40px;
+	display:inline-block;
+}
+#err_msg_shippingCity
+{
+	margin-left:40px;
+	display:inline-block;
+}
+#billingFormState
+{
+	display:inline-block;
+}
+#err_msg_billingFormState
+{
+	margin-left:30px;
+	display:inline-block;
+}
+#err_msg_shippingFormState
+{
+	margin-left:30px;
+	display:inline-block;
+}
+#err_msg_billingZipcode
+{
+	margin-left:35px;
+	display:inline-block;
+}
+#err_msg_shippingZipcode
+{
+	margin-left:35px;
+	display:inline-block;
+}
+#billingFormZipcode
+{
+	display:inline-block;
+}
+#billingFormPhoneNumber
+{
+	display:inline-block;
+}
+#err_msg_billingPhone
+{
+	margin-left:35px;
+	display:inline-block;
+}
+#err_msg_shippingPhone
+{
+	margin-left:35px;
+	display:inline-block;
+}
+#err_msg_cardHolderName
+{
+	margin-left:35px;
+	display:inline-block;	
+}
+#err_msg_cardNumber
+{
+	margin-left:35px;
+	display:inline-block;
+}
+#err_msg_cardMonth
+{
+	margin-left:35px;
+	display:inline-block;
+}
+#err_msg_cardYear
+{
+	margin-left:35px;
+	display:inline-block;
+}
+#err_msg_cardCVV
+{
+	margin-left:35px;
+	display:inline-block;
+}
+
 #shipFormName
 {
     width: 200px;
@@ -28,6 +130,7 @@ overflow:scroll;
 #shipFormStreetAddress
 {
     width: 200px;
+    display:inline-block;
 }
 #shipFormApartmentNumber
 {
@@ -36,14 +139,17 @@ overflow:scroll;
 #shipFormCity
 {
     width: 200px;
+    display:inline-block;
 }
 #shipFormZipcode
 {
     width: 200px;
+    display:inline-block;
 }
 #shipFormPhoneNumber
 {
     width: 200px;
+    display:inline-block;
 }
 #proceedToBilling
 {
@@ -58,22 +164,27 @@ overflow:scroll;
 #billingCardHolderName
 {
     width: 200px;
+    display:inline-block;
 }
 #billingCardNumber
 {
     width: 200px;
+    display:inline-block;
 }
 #billingCardMonth
 {
     width: 200px;
+    display:inline-block; 
 }
 #billingCardYear
 {
     width: 200px;
+    display:inline-block;
 }
 #billingCardCVV
 {
     width: 200px;
+    display:inline-block;
 }
 #orderSummary
 {
@@ -89,16 +200,32 @@ overflow:scroll;
 {
 	float:right;
 }
-#addressTitleBar
+#addressTitleBarShipping
 {
 	outline:0;
 	margin-left: 200px;
-    width: 500px;
+    width: 600px;
     height:50px;
     padding:20px;
     box-shadow: 2px 2px 2px 1px grey;
 }
-#toggleDivInfo
+#toggleDivInfoShipping
+{
+	cursor:pointer;
+	width:20px;
+	height:20px;
+    float:right;
+	margin-bottom:20px;
+}
+#toggleDivInfoCardInfo
+{
+	cursor:pointer;
+	width:20px;
+	height:20px;
+    float:right;
+	margin-bottom:20px;
+}
+#toggleDivInfoBilling
 {
 	cursor:pointer;
 	width:20px;
@@ -110,7 +237,16 @@ overflow:scroll;
 {
 	outline:0;
 	margin-left: 200px;
-    width: 500px;
+    width: 600px;
+    height:50px;
+    padding:20px;
+    box-shadow: 2px 2px 2px 1px grey;
+}
+#billingAddressTitleBar
+{
+    outline:0;
+	margin-left: 200px;
+    width: 600px;
     height:50px;
     padding:20px;
     box-shadow: 2px 2px 2px 1px grey;
