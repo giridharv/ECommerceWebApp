@@ -5,7 +5,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnector {
-	//private static String connectionURL = "jdbc:mysql://opatija:3306/jadrn048?user=jadrn048&password=outlet";
 	Connection connection;
 	  
 	public Connection getConnection()
@@ -13,7 +12,7 @@ public class DBConnector {
 	try 
 	{
 		Class.forName("com.mysql.jdbc.Driver");
-		connection =DriverManager.getConnection("jdbc:mysql://localhost:3306/soundcomponents","root","loveisintheair59");
+		connection =DriverManager.getConnection("jdbc:mysql://localhost:3306/soundcomponents","","");
 		//connection = DriverManager.getConnection(connectionURL);
 	} 
 	catch (ClassNotFoundException e) 
